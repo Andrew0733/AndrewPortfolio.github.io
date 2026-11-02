@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Big Muscle — a bilingual sports supplements e-commerce platform case study by Andrew Hany.">
+  <meta property="og:title" content="Big Muscle — E-commerce Case Study | Andrew Hany">
+  <meta property="og:description" content="A bilingual sports nutrition storefront and no-code admin dashboard built for Egypt.">
+  <meta property="og:type" content="website">
+  <title>Big Muscle — E-commerce Case Study | Andrew Hany</title>
+
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="apple-touch-icon" href="../logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Reuse the existing project-page design system -->
+  <link rel="stylesheet" href="../LightStep/css/base.css">
+  <link rel="stylesheet" href="../LightStep/css/nav.css">
+  <link rel="stylesheet" href="../LightStep/css/hero.css">
+  <link rel="stylesheet" href="../LightStep/css/sections.css">
+  <link rel="stylesheet" href="../LightStep/css/survey.css">
+  <link rel="stylesheet" href="../LightStep/css/userflow.css">
+  <link rel="stylesheet" href="../LightStep/css/gallery.css">
+  <link rel="stylesheet" href="../LightStep/css/palette.css">
+  <link rel="stylesheet" href="../LightStep/css/typography.css">
+  <link rel="stylesheet" href="../LightStep/css/footer.css">
+  <link rel="stylesheet" href="../LightStep/css/animations.css">
+  <link rel="stylesheet" href="../LightStep/css/responsive.css">
+  <link rel="stylesheet" href="bigmuscle.css">
+</head>
+
+<body class="bigmuscle-page">
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="../index.html" class="logo" aria-label="Andrew Hany — Home">
+      <img src="../logo.png" alt="Andrew Hany">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#strategy">UX Strategy</a></li>
+      <li><a href="#flow">Journey</a></li>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#admin">Admin</a></li>
+      <li><a href="#tech">Tech</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-meta">
+      <span>Case Study 004</span>
+      <span>E-commerce · Sports Nutrition</span>
+    </div>
+
+    <h1>
+      <span class="split">BIG</span>
+      <span class="italic split">MUSCLE</span>
+    </h1>
+
+    <div class="hero-sub reveal">
+      <p class="desc">
+        A bilingual commerce platform built for Egypt’s sports nutrition market —
+        pairing a mobile-first storefront with a no-code admin system for products,
+        orders, and promotions.
+      </p>
+
+      <div class="hero-tags">
+        <span>E-commerce UX</span>
+        <span>Full-Stack Development</span>
+        <span>Arabic / English</span>
+        <span>Cash-on-Delivery Checkout</span>
+      </div>
+    </div>
+
+    <div class="hero-actions reveal">
+      <a class="hero-project-link" href="https://bigmuscle-api.vercel.app" target="_blank" rel="noopener noreferrer">
+        Explore Live Store <span aria-hidden="true">↗</span>
+      </a>
+      <a class="hero-project-link secondary" href="https://github.com/Andrew0733/bigmuscle-store" target="_blank" rel="noopener noreferrer">
+        View Source Code <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Shop · Discover · Power Up</span>
+      <span>Arabic · English · RTL · LTR</span>
+      <span>Built for Sports Nutrition</span>
+      <span>Storefront · Admin · Offers</span>
+      <span>Shop · Discover · Power Up</span>
+      <span>Arabic · English · RTL · LTR</span>
+      <span>Built for Sports Nutrition</span>
+      <span>Storefront · Admin · Offers</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <div class="about-left reveal">
+        <div class="section-label">About Project</div>
+        <h2 class="about-heading">Supplements, <em>simplified.</em></h2>
+
+        <div class="about-visual">
+          <div class="bm-wordmark" role="img" aria-label="Big Muscle sports nutrition wordmark">
+
+            <img src="assets/logo.jpg" alt="Big Muscle mobile product grid" loading="lazy">
+           <!-- <span>BIG</span> -->
+           <!--  <strong>MUSCLE</strong>  -->
+            <!-- <small>SPORTS NUTRITION</small> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <p>
+          Big Muscle is a dynamic online store for sports supplements in Egypt.
+          Customers can browse products, apply offers, and place cash-on-delivery
+          orders without creating an account.
+        </p>
+        <p>
+          The bilingual storefront switches between Arabic and English with
+          right-to-left and left-to-right layouts. Behind it, a dedicated dashboard
+          lets the store owner manage the shop without editing code.
+        </p>
+
+        <div class="project-facts">
+          <div><span>ROLE</span><strong>Full-Stack Developer</strong></div>
+          <div><span>MARKET</span><strong>Egypt</strong></div>
+          <div><span>LANGUAGES</span><strong>Arabic / English</strong></div>
+          <div><span>PAYMENT</span><strong>Cash on Delivery</strong></div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⌕</span>
+            <h3>Product Discovery</h3>
+            <p>Search, category filters, and detailed product views help customers find products quickly.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">＋</span>
+            <h3>Simple Checkout</h3>
+            <p>A persistent cart and one-page checkout keep the path to ordering short.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">%</span>
+            <h3>Smart Promotions</h3>
+            <p>Promo codes, automatic discounts, free-shipping rules, and bundles work together.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">▤</span>
+            <h3>Owner Dashboard</h3>
+            <p>Products, categories, orders, announcements, and offers are managed from one place.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN PHILOSOPHY -->
+  <section class="brand">
+    <div class="section-label reveal" style="justify-content:center">Design Philosophy</div>
+    <h2 class="reveal">
+      High-energy design.
+      <span class="highlight">Low-friction shopping.</span>
+    </h2>
+    <p class="reveal">
+      The black foundation and strong red accents create an athletic, high-contrast
+      identity while keeping attention on the products and key actions. A responsive
+      mobile-first layout, clear pricing, and instant language switching make the
+      experience easy to use across devices and languages.
+    </p>
+  </section>
+
+  <!-- UX / CONVERSION STRATEGY -->
+  <section class="survey" id="strategy">
+    <div class="section-label reveal">UX / Conversion Strategy</div>
+    <h2 class="reveal">Fewer steps.<br>More <em>confidence.</em></h2>
+    <p class="survey-intro reveal">
+      The shopping experience is designed to reduce friction: no forced registration,
+      visible order totals, region-based delivery fees, and a checkout form that keeps
+      the essential details together.
+    </p>
+
+    <div class="stat-cards">
+      <div class="stat-card reveal">
+        <div class="val">&lt;4</div>
+        <div class="lbl">Clicks to Checkout</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">2</div>
+        <div class="lbl">Store Languages</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">0</div>
+        <div class="lbl">Forced Sign-ups</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">COD</div>
+        <div class="lbl">Payment Method</div>
+      </div>
+    </div>
+
+    <div class="survey-grid">
+      <div class="survey-block reveal">
+        <h4>Short Purchase Path</h4>
+        <div class="demo-grid">
+          <div class="demo-item"><strong>01</strong><span>Browse or search products</span></div>
+          <div class="demo-item"><strong>02</strong><span>View product details</span></div>
+          <div class="demo-item"><strong>03</strong><span>Add items to cart</span></div>
+          <div class="demo-item"><strong>04</strong><span>Enter details and confirm</span></div>
+        </div>
+      </div>
+
+      <div class="survey-block reveal">
+        <h4>Region-Based Shipping</h4>
+        <div class="shipping-list">
+          <div class="shipping-row"><span>Cairo / Giza</span><strong>90 EGP</strong></div>
+          <div class="shipping-row"><span>Alexandria</span><strong>90 EGP</strong></div>
+          <div class="shipping-row"><span>Delta / Canal</span><strong>90 EGP</strong></div>
+          <div class="shipping-row"><span>Upper Egypt</span><strong>120 EGP</strong></div>
+          <div class="shipping-row"><span>Sinai / Red Sea / Matrouh</span><strong>130 EGP</strong></div>
+        </div>
+        <p class="shipping-note">
+          Shipping updates with the selected region. The checkout also displays an advisory
+          about possible extra fees for orders over 2 kg.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER JOURNEY -->
+  <section class="userflow" id="flow">
+    <div class="uf-header">
+      <div class="section-label reveal" style="justify-content:center">Customer Journey</div>
+      <h2 class="reveal">From browse <em>to doorstep.</em></h2>
+      <p class="reveal">
+        A clear path from product discovery through cash-on-delivery order confirmation.
+      </p>
+    </div>
+
+    <div class="journey-grid flow-split">
+      <article class="journey-step reveal">
+        <span class="journey-number">01</span>
+        <span class="journey-icon" aria-hidden="true">⌕</span>
+        <h3>Discover</h3>
+        <p>Browse the catalog, search instantly, or filter by category.</p>
+      </article>
+
+      <article class="journey-step reveal">
+        <span class="journey-number">02</span>
+        <span class="journey-icon" aria-hidden="true">▣</span>
+        <h3>Explore</h3>
+        <p>Open a product detail view and inspect its full-size image.</p>
+      </article>
+
+      <article class="journey-step reveal">
+        <span class="journey-number">03</span>
+        <span class="journey-icon" aria-hidden="true">＋</span>
+        <h3>Add to Cart</h3>
+        <p>Adjust quantities and see the cart subtotal update immediately.</p>
+      </article>
+
+      <article class="journey-step reveal">
+        <span class="journey-number">04</span>
+        <span class="journey-icon" aria-hidden="true">▤</span>
+        <h3>Check Out</h3>
+        <p>Enter contact details, choose a region, and review live totals.</p>
+      </article>
+
+      <article class="journey-step reveal">
+        <span class="journey-number">05</span>
+        <span class="journey-icon" aria-hidden="true">✓</span>
+        <h3>Confirm</h3>
+        <p>Place the order with cash on delivery and view the confirmation.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- STOREFRONT SCREENS -->
+  <section class="onboarding" id="screens">
+    <div class="section-label reveal" style="justify-content:center">Storefront & Admin Screens</div>
+    <h2 class="reveal">Every screen, <em>intentional.</em></h2>
+    <p class="reveal">
+      Add your real project screenshots to the frames below. They’re arranged to follow
+      the shopper’s journey and show the owner-facing tools too.
+    </p>
+
+    <div class="app-gallery">
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">01 · Storefront</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+            <img src="assets/intro.jpg" alt="Big Muscle storefront homepage" loading="lazy">  
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Homepage & Featured Offers</h3>
+          <p>The announcement bar, hero, and featured products introduce the store and its current offers.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">02 · Product Discovery</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+            <img src="assets/home page1(laptob).jpg" alt="Big Muscle mobile product grid" loading="lazy"> 
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Product Browsing on Mobile</h3>
+          <p>A responsive two-column catalog with category filtering and instant product search.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">03 · Product Details</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+           <img src="assets/product cart.png" alt="Big Muscle product detail modal and image lightbox" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Product Details & Image Lightbox</h3>
+          <p>Customers can inspect product information and view a larger image without losing their place.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">04 · Checkout</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+            <img src="assets/shipping cart.png" alt="Big Muscle checkout with region selector and live totals" loading="lazy"> 
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Region Selector & Live Totals</h3>
+          <p>Shipping, discounts, and the final total update as the customer completes the order.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">05 · Admin Dashboard</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+            <img src="assets/admin(laptob).jpg" alt="Big Muscle admin dashboard for promotions and announcements" loading="lazy"> 
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Promotions & Store Management</h3>
+          <p>The owner can manage promo codes, announcement text, offers, and products from the dashboard.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">06 · Order Confirmation</span>
+        <div class="gallery-frame">
+          
+          <div class="screenshot-placeholder">
+            <img src="assets/contact us.jpg" alt="Big Muscle order confirmation screen" loading="lazy"> 
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>CONTACT US</h3>
+          <p>A dedicated contact section makes it easy for customers to reach Big Muscle for inquiries, support, and assistance.</p>
+        </div>
+      </article>
+
+      
+    </div>
+  </section>
+
+  <!-- ADMIN DASHBOARD -->
+  <section class="admin-section" id="admin">
+    <div class="admin-inner">
+      <div class="section-label reveal">Admin Experience</div>
+      <h2 class="reveal">Store operations, <em>made simple.</em></h2>
+      <p class="admin-intro reveal">
+        The dashboard gives the store owner control over everyday operations and campaigns
+        without requiring coding knowledge.
+      </p>
+
+      <div class="admin-grid">
+        <article class="admin-card reveal">
+          <span class="admin-number">01</span>
+          <h3>Products & Categories</h3>
+          <p>Add, edit, or remove products, manage categories, set prices and stock, and upload product images.</p>
+        </article>
+
+        <article class="admin-card reveal">
+          <span class="admin-number">02</span>
+          <h3>Orders</h3>
+          <p>Review customer details, order items, shipping, discounts, totals, and order status.</p>
+        </article>
+
+        <article class="admin-card reveal">
+          <span class="admin-number">03</span>
+          <h3>Offers & Promo Codes</h3>
+          <p>Create percentage, fixed-amount, and free-shipping codes, with minimum-order and category rules.</p>
+        </article>
+
+        <article class="admin-card reveal">
+          <span class="admin-number">04</span>
+          <h3>Storefront Controls</h3>
+          <p>Edit Arabic and English announcements, configure automatic offers, and publish bundle cards.</p>
+        </article>
+      </div>
+
+      <div class="admin-note reveal">
+        <strong>Promotion logic:</strong>
+        promo codes take priority over automatic offers to avoid stacking discounts.
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOR SYSTEM -->
+  <section class="palettes-wrap" id="system">
+    <div class="palettes-inner">
+      <div class="head">
+        <div class="section-label reveal" style="justify-content:center">Color System</div>
+        <h2 class="reveal">Bold by <em>design.</em></h2>
+      </div>
+
+      <div class="palette-block reveal">
+        <h3>Big Muscle Palette</h3>
+        <p class="desc">
+          A high-contrast palette built around the brand’s red, black, and white.
+          Red highlights key actions; black keeps the interface focused on products.
+        </p>
+
+        <div class="palette-row">
+          <div class="swatch" style="background:#E60000;color:#fff">
+            <strong>#E60000</strong>
+            <small>Brand Red</small>
+          </div>
+          <div class="swatch" style="background:#0D0D0D;color:#fff;border:1px solid #333">
+            <strong>#0D0D0D</strong>
+            <small>Primary Black</small>
+          </div>
+          <div class="swatch" style="background:#1A1A1A;color:#fff;border:1px solid #333">
+            <strong>#1A1A1A</strong>
+            <small>UI Surface</small>
+          </div>
+          <div class="swatch swatch-light" style="background:#FFFFFF;color:#0D0D0D">
+            <strong>#FFFFFF</strong>
+            <small>White</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="tech-section" id="tech">
+    <div class="tech-inner">
+      <div class="section-label reveal">Technical Build</div>
+      <h2 class="reveal">From storefront <em>to back office.</em></h2>
+      <p class="tech-intro reveal">
+        A vanilla JavaScript storefront connects to a REST API and cloud-backed services
+        for product data, images, and deployment.
+      </p>
+
+      <div class="tech-grid">
+        <article class="tech-card reveal">
+          <span class="tech-layer">Frontend</span>
+          <h3>HTML5 · CSS3 · JavaScript</h3>
+          <p>Responsive storefront built with vanilla JavaScript and modular scripts.</p>
+        </article>
+
+        <article class="tech-card reveal">
+          <span class="tech-layer">Backend</span>
+          <h3>Node.js · Express</h3>
+          <p>RESTful API for the storefront and admin features.</p>
+        </article>
+
+        <article class="tech-card reveal">
+          <span class="tech-layer">Database</span>
+          <h3>MongoDB Atlas</h3>
+          <p>Cloud database for the store’s dynamic content and records.</p>
+        </article>
+
+        <article class="tech-card reveal">
+          <span class="tech-layer">Image Storage</span>
+          <h3>Cloudinary CDN</h3>
+          <p>Product images are uploaded to Cloudinary and delivered through its CDN.</p>
+        </article>
+
+        <article class="tech-card reveal">
+          <span class="tech-layer">Deployment</span>
+          <h3>Vercel</h3>
+          <p>Serverless deployment for the live platform.</p>
+        </article>
+
+        <article class="tech-card reveal">
+          <span class="tech-layer">Interface</span>
+          <h3>Font Awesome 6</h3>
+          <p>Icon library used across the storefront and dashboard.</p>
+        </article>
+      </div>
+
+      <div class="tech-highlights reveal">
+        <span>LocalStorage cart persistence</span>
+        <span>RTL / LTR switching</span>
+        <span>Region-based shipping</span>
+        <span>Live order totals</span>
+        <span>Automatic promotions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOME -->
+  <section class="outcome">
+    <div class="section-label reveal" style="justify-content:center">The Result</div>
+    <h2 class="reveal">A complete store.<br><em>Owner-controlled.</em></h2>
+    <p class="reveal">
+      Big Muscle brings product discovery, bilingual shopping, checkout, promotions,
+      and store management into one platform — giving customers a direct path to order
+      and the owner a practical way to run the store without touching code.
+    </p>
+
+    <div class="outcome-actions reveal">
+      <a class="cta-btn outcome-btn" href="https://bigmuscle-api.vercel.app" target="_blank" rel="noopener noreferrer">
+        Visit Live Store →
+      </a>
+      <a class="cta-btn outcome-btn secondary" href="https://github.com/Andrew0733/bigmuscle-store" target="_blank" rel="noopener noreferrer">
+        Explore Source →
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="section-label" style="justify-content:center">Get in Touch</div>
+    <h2>LET'S <em>connect.</em></h2>
+    <p class="footer-intro">
+      Have a project in mind or want to collaborate? Send me a message and I’ll get back to you.
+    </p>
+
+    <form class="contact-form" action="https://formsubmit.co/andrewiskander1@outlook.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from the Big Muscle case study">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+      </div>
+      <textarea name="message" placeholder="Your Message…" rows="5" required></textarea>
+      <button type="submit" class="cta-btn">Send Message →</button>
+    </form>
+
+    <div class="social-links">
+      
+      <a href="https://www.linkedin.com/in/andrew-hany-iskander0212" target="_blank" rel="noopener noreferrer">
+        <span class="social-icon" aria-hidden="true">in</span>
+        <span class="social-label">LinkedIn</span>
+      </a>
+      <a href="tel:+201147412021">
+        <span class="social-icon" aria-hidden="true">☏</span>
+        <span class="social-label">+20 114 741 2021</span>
+      </a>
+      <a href="mailto:andrewiskander1@outlook.com">
+        <span class="social-icon" aria-hidden="true">@</span>
+        <span class="social-label">Email Andrew</span>
+      </a>
+    </div>
+
+    <div class="foot-bot">
+      <span>© <span id="currentYear"></span> ANDREW HANY</span>
+      <span></span>
+      <span>PORTFOLIO</span>
+    </div>
+  </footer>
+
+  <script src="../LightStep/js/cursor.js" defer></script>
+  <script src="../LightStep/js/reveal.js" defer></script>
+  <script src="../LightStep/js/gsap-anims.js" defer></script>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navMenu.classList.toggle("open", !isOpen);
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
+      });
+    });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
