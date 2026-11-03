@@ -554,26 +554,24 @@
 </button>
 
 </body>
-    <!-- MOBILE MENU SCRIPT -->
-  <script>
+   <script>
     const navToggle = document.getElementById("navToggle");
     const navMenu = document.getElementById("navMenu");
 
-    if (navToggle && navMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!isOpen));
-        navMenu.classList.toggle("open", !isOpen);
-      });
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navMenu.classList.toggle("open", !isOpen);
+    });
 
-      // Close menu when a link is clicked
-      navMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navToggle.setAttribute("aria-expanded", "false");
-          navMenu.classList.remove("open");
-        });
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
       });
-    }
+    });
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
