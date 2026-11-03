@@ -43,16 +43,21 @@
 
 <!-- NAV -->
 <nav aria-label="Main navigation">
-  <a href="home.html" class="logo">
-    <img src="logo.png" alt="Andrew Hany Logo">
+  <!-- Your Logo -->
+  <a href="index.html" class="logo" aria-label="Andrew Hany — Home">
+    <img src="logo.png" alt="Andrew Hany"> <!-- Adjust path if inside a project folder -->
   </a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
+
+  <!-- 1. ADD THIS HAMBURGER BUTTON -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
+
+  <!-- 2. ADD id="navMenu" TO YOUR UL -->
   <ul id="navMenu">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#work">Selected Work</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
