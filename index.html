@@ -42,26 +42,22 @@
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <!-- NAV -->
+<!-- NAV -->
 <nav aria-label="Main navigation">
-    <a href="../index.html" class="logo" aria-label="Andrew Hany — Home">
-      <img src="../logo.png" alt="Andrew Hany">
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <ul id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#strategy">UX Strategy</a></li>
-      <li><a href="#flow">Journey</a></li>
-      <li><a href="#screens">Screens</a></li>
-      <li><a href="#admin">Admin</a></li>
-      <li><a href="#tech">Tech</a></li>
-    </ul>
-  </nav>
+  <a href="home.html" class="logo">
+    <img src="logo.png" alt="Andrew Hany Logo">
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="navMenu">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 <!-- HERO — POSTER STYLE -->
 <section class="hero">
   <div class="hero-top">
@@ -553,25 +549,7 @@
   ↑
 </button>
 
-</body>
-   <script>
-    const navToggle = document.getElementById("navToggle");
-    const navMenu = document.getElementById("navMenu");
 
-    navToggle.addEventListener("click", () => {
-      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", String(!isOpen));
-      navMenu.classList.toggle("open", !isOpen);
-    });
-
-    navMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navToggle.setAttribute("aria-expanded", "false");
-        navMenu.classList.remove("open");
-      });
-    });
-
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-  </script>
+   
 </body>
 </html>
