@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Otlobly — a bilingual food delivery app case study by Andrew Hany. Fast ordering, transparent pricing, and an RTL-first design system.">
+  <meta property="og:title" content="Otlobly — Food Delivery App Case Study | Andrew Hany">
+  <meta property="og:description" content="A bilingual food delivery app concept for Cairo — guest checkout, always-visible totals, and a full design system.">
+  <meta property="og:type" content="website">
+  <title>Otlobly — Food Delivery App Case Study | Andrew Hany</title>
+
+
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="apple-touch-icon" href="../logo.png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+
+  <!-- Reuse the existing project-page design system -->
+  <link rel="stylesheet" href="../LightStep/css/base.css">
+  <link rel="stylesheet" href="../LightStep/css/nav.css">
+  <link rel="stylesheet" href="../LightStep/css/hero.css">
+  <link rel="stylesheet" href="../LightStep/css/sections.css">
+  <link rel="stylesheet" href="../LightStep/css/survey.css">
+  <link rel="stylesheet" href="../LightStep/css/userflow.css">
+  <link rel="stylesheet" href="../LightStep/css/gallery.css">
+  <link rel="stylesheet" href="../LightStep/css/palette.css">
+  <link rel="stylesheet" href="../LightStep/css/typography.css">
+  <link rel="stylesheet" href="../LightStep/css/footer.css">
+  <link rel="stylesheet" href="../LightStep/css/animations.css">
+  <link rel="stylesheet" href="../LightStep/css/responsive.css">
+  <link rel="stylesheet" href="otlobly.css">
+</head>
+
+
+<body class="otlobly-page">
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+
+  <nav aria-label="Main navigation">
+    <a href="../index.html" class="logo" aria-label="Andrew Hany — Home">
+      <img src="../logo.png" alt="Andrew Hany">
+    </a>
+
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <ul id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#flow">Journey</a></li>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#system">Design System</a></li>
+      <li><a href="#impact">Impact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-meta">
+      <span>Case Study 007</span>
+      <span>Mobile App · Food Delivery</span>
+    </div>
+
+
+    <h1>
+      <span class="split">OTLOB</span>
+      <span class="italic split">BLY</span>
+    </h1>
+
+
+    <div class="hero-sub reveal">
+      <p class="desc">
+        A bilingual food delivery app concept for Cairo and the MENA market —
+        built around one promise: order your meal in under three minutes,
+        with the full price visible from the very first tap.
+      </p>
+
+
+      <div class="hero-tags">
+        <span>UI/UX Design</span>
+        <span>Design System</span>
+        <span>Arabic / English · RTL</span>
+        <span>Mobile · iOS / Android</span>
+      </div>
+    </div>
+
+
+    <div class="hero-actions reveal">
+      <!-- TODO: Replace with your real Figma prototype link -->
+      <a class="hero-project-link" href="https://www.figma.com/proto/Lf6vQNECDcglKENYOTqETT/Simple-Style-Guide-%7C-Typography--Color---Shadow--Community-?node-id=128-479&t=tKVCdqB9COWqwRbq-1" target="_blank" rel="noopener noreferrer">
+        View Figma Prototype <span aria-hidden="true">↗</span>
+      </a>
+      <!-- TODO: Replace with your Figma design file link -->
+      <a class="hero-project-link secondary" href="https://www.figma.com/design/Lf6vQNECDcglKENYOTqETT/Simple-Style-Guide-%7C-Typography--Color---Shadow--Community-?node-id=128-688&t=tKVCdqB9COWqwRbq-1" target="_blank" rel="noopener noreferrer">
+        Explore Design File <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+
+    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+  </section>
+
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Order · Build · Track</span>
+      <span>Arabic · English · RTL · LTR</span>
+      <span>Total Price, Always Visible</span>
+      <span>Guest Checkout · Zero Friction</span>
+      <span>Order · Build · Track</span>
+      <span>Arabic · English · RTL · LTR</span>
+      <span>Total Price, Always Visible</span>
+      <span>Guest Checkout · Zero Friction</span>
+    </div>
+  </div>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about">
+      <div class="about-left reveal">
+        <div class="section-label">About Project</div>
+        <h2 class="about-heading">Food delivery, <em>minus the friction.</em></h2>
+
+
+        <div class="about-visual">
+          <!-- TODO: Replace with your Otlobly cover / mockup image -->
+          <div class="otlobly-visual" role="img" aria-label="Otlobly food delivery app visual">
+            <img src="assets/project cover.png" alt="Otlobly app cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="about-right reveal">
+        <p>
+          Otlobly is a food delivery app concept designed for Cairo and the wider
+          MENA market. The brief tackled the friction that makes ordering
+          frustrating: forced sign-ups before browsing, fees revealed only at the
+          last step, and checkout paths with too many taps.
+        </p>
+        <p>
+          The result is a bilingual (Arabic / English) mobile experience where the
+          full price is visible from the first screen, guests can order without an
+          account, and the whole flow takes four steps instead of seven — backed
+          by a scalable design system built RTL-first.
+        </p>
+
+
+        <div class="project-facts">
+          <div><span>ROLE</span><strong>UI/UX Designer</strong></div>
+          <div><span>MARKET</span><strong>Cairo · MENA</strong></div>
+          <div><span>LANGUAGES</span><strong>Arabic / English</strong></div>
+          <div><span>TOOLS</span><strong>Figma · Miro</strong></div>
+        </div>
+
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⌕</span>
+            <h3>Guest Ordering</h3>
+            <p>Browse the full menu and place orders without ever creating an account.</p>
+          </article>
+
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">◎</span>
+            <h3>Total Visibility</h3>
+            <p>A persistent total — like "Update Cart · EGP 179.50" — follows users from Home to Checkout.</p>
+          </article>
+
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">＋</span>
+            <h3>Four-Step Ordering</h3>
+            <p>An in-cart stepper and a sticky cart button cut the path from seven steps to four.</p>
+          </article>
+
+
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">▤</span>
+            <h3>Design System</h3>
+            <p>A three-tier token system (Primitives → Semantic → Components) keeps every screen consistent.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DESIGN PHILOSOPHY -->
+  <section class="brand">
+    <div class="section-label reveal" style="justify-content:center">Design Philosophy</div>
+    <h2 class="reveal">
+      Appetite-driven visuals.
+      <span class="highlight">Trust-first pricing.</span>
+    </h2>
+    <p class="reveal">
+      Large food photography does the selling, while the signature orange is reserved
+      for one job: action. Neutrals keep the interface calm, clear badges build trust
+      early, and the bilingual-first approach means RTL was designed in from day one —
+      not patched in later.
+    </p>
+  </section>
+
+
+  <!-- RESEARCH -->
+  <section class="survey" id="research">
+    <div class="section-label reveal">User Research</div>
+    <h2 class="reveal">Research first. <em>Design second.</em></h2>
+    <p class="survey-intro reveal">
+      Before opening Figma, I ran a survey with 60 participants across Cairo and Giza,
+      plus six in-depth interviews with frequent delivery users — to find out what
+      actually breaks the ordering experience.
+    </p>
+
+
+    <div class="stat-cards">
+      <div class="stat-card reveal">
+        <div class="val">71%</div>
+        <div class="lbl">Frustrated by Hidden Fees</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">82%</div>
+        <div class="lbl">Want the Total Always Visible</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">74%</div>
+        <div class="lbl">Would Order as Guests</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">57%</div>
+        <div class="lbl">Reorder the Same Meals</div>
+      </div>
+    </div>
+
+
+    <div class="survey-grid">
+      <div class="survey-block reveal">
+        <h4>Survey · Top Frustrations</h4>
+        <div class="demo-grid">
+          <div class="demo-item"><strong>71%</strong><span>Hidden fees revealed at the last step</span></div>
+          <div class="demo-item"><strong>58%</strong><span>Forced registration just to browse</span></div>
+          <div class="demo-item"><strong>52%</strong><span>Too many steps to checkout</span></div>
+          <div class="demo-item"><strong>47%</strong><span>Unclear delivery time</span></div>
+          <div class="demo-item"><strong>38%</strong><span>Cluttered offers and ads</span></div>
+        </div>
+      </div>
+
+
+      <div class="survey-block reveal">
+        <h4>Interviews · Six Conversations</h4>
+        <div class="shipping-list">
+          <div class="shipping-row"><span>Hidden fees break trust</span><strong>5 / 6</strong></div>
+          <div class="shipping-row"><span>Live tracking reduces anxiety</span><strong>5 / 6</strong></div>
+          <div class="shipping-row"><span>Forced registration is annoying</span><strong>4 / 6</strong></div>
+          <div class="shipping-row"><span>One-tap reorder is a must</span><strong>4 / 6</strong></div>
+        </div>
+        <p class="shipping-note">
+          "I pick my food, then the total jumps at the end — so I close the app."
+          · "I don't want an account just to read a menu." ·
+          "I order the same meal every time — I wish I could tap once."
+        </p>
+      </div>
+    </div>
+
+
+    <div class="survey-block reveal">
+      <h4>From Insight to Decision</h4>
+      <div class="shipping-list">
+        <div class="shipping-row"><span>71% — hidden fees break trust</span><strong>→ Total visible at every step + fee breakdown in cart</strong></div>
+        <div class="shipping-row"><span>68% — abandon when totals appear late</span><strong>→ Running total shown from Home, before checkout</strong></div>
+        <div class="shipping-row"><span>58% — against forced sign-up</span><strong>→ Guest browsing & ordering, with optional Google login</strong></div>
+        <div class="shipping-row"><span>52% — too many steps</span><strong>→ Sticky cart button + stepper directly in the cart</strong></div>
+        <div class="shipping-row"><span>79% — want live tracking</span><strong>→ Tracking screen with ETA and driver status</strong></div>
+        <div class="shipping-row"><span>57% — reorder the same meals</span><strong>→ Order History & one-tap Reorder in Profile</strong></div>
+        <div class="shipping-row"><span>54% — prefer cash</span><strong>→ Cash on Delivery as the default payment option</strong></div>
+        <div class="shipping-row"><span>63% — bilingual users</span><strong>→ RTL / LTR layouts with flexible, mirrored components</strong></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CUSTOMER JOURNEY -->
+  <section class="userflow" id="flow">
+    <div class="uf-header">
+      <div class="section-label reveal" style="justify-content:center">Ordering Journey</div>
+      <h2 class="reveal">From craving <em>to doorstep.</em></h2>
+      <p class="reveal">
+        The typical delivery flow takes seven steps. Otlobly compresses it to four —
+        with the full price on screen at every one of them.
+      </p>
+    </div>
+
+
+    <div class="journey-grid flow-split">
+      <article class="journey-step reveal">
+        <span class="journey-number">01</span>
+        <span class="journey-icon" aria-hidden="true">⌕</span>
+        <h3>Browse</h3>
+        <p>Discover restaurants as a guest — no account, no barrier. Badges show Free Delivery, ETA, and rating upfront.</p>
+      </article>
+
+
+      <article class="journey-step reveal">
+        <span class="journey-number">02</span>
+        <span class="journey-icon" aria-hidden="true">＋</span>
+        <h3>Build</h3>
+        <p>Add items with an in-cart stepper while the running total stays visible the whole time.</p>
+      </article>
+
+
+      <article class="journey-step reveal">
+        <span class="journey-number">03</span>
+        <span class="journey-icon" aria-hidden="true">✓</span>
+        <h3>Confirm</h3>
+        <p>Review the full price breakdown — items, fees, delivery — before placing the order. Cash on delivery by default.</p>
+      </article>
+
+
+      <article class="journey-step reveal">
+        <span class="journey-number">04</span>
+        <span class="journey-icon" aria-hidden="true">◉</span>
+        <h3>Track</h3>
+        <p>Follow the order live with ETA and driver status — removing the "where is my food?" anxiety.</p>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- SCREENS -->
+  <section class="onboarding" id="screens">
+    <div class="section-label reveal" style="justify-content:center">App Screens</div>
+    <h2 class="reveal">Every screen, <em>with a reason.</em></h2>
+    <p class="reveal">
+      Each screen below maps directly to a research insight — nothing was designed
+      "just because it looks good."
+    </p>
+
+
+    <div class="app-gallery">
+
+
+      <!-- TODO: Replace image paths with your real Figma frame exports -->
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">01 · Home</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/home page.png" alt="Otlobly home screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Discover Without Signing Up</h3>
+          <p>Restaurants, categories, and featured offers — with the running total pinned at the bottom from the very first screen.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">02 · Menu</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/home page2.png" alt="Otlobly menu screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Appetite-Driven Browsing</h3>
+          <p>Large food photography does the selling; orange is reserved for actions, and trust badges (Free Delivery · ETA · Rating) set expectations early.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">03 · Cart</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/checkout2.png" alt="Otlobly cart screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>The Math, Out in the Open</h3>
+          <p>An in-cart stepper and an itemized fee breakdown mean no surprises waiting at the end of checkout.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">04 · Checkout</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/checkout.png" alt="Otlobly checkout screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>No Last-Step Surprises</h3>
+          <p>Address, payment, and the full total on one screen — the direct answer to the 71% who resented hidden fees.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">05 · Tracking</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/track order2.png" alt="Otlobly live tracking screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Live Order, Calmer User</h3>
+          <p>ETA and driver status update in real time — the feature 79% of research participants called essential.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reverse reveal">
+        <span class="gallery-tag">06 · Login / Sign Up</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/LogIn SignUp.png" alt="Otlobly login and sign up screens" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>Optional, Not Forced</h3>
+          <p>Email, phone, or Google — minimal fields, and entirely skippable. The 58% who resented forced registration can simply browse as guests.</p>
+        </div>
+      </article>
+
+
+      <article class="gallery-item reveal">
+        <span class="gallery-tag">07 · Profile</span>
+        <div class="gallery-frame">
+          <div class="screenshot-placeholder">
+            <img src="assets/profile&settings.png" alt="Otlobly profile hub screen" loading="lazy">
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3>One Hub, One-Tap Reorder</h3>
+          <p>Addresses, payments, favorites, and points — with Order History built for the 57% who reorder the same meals.</p>
+        </div>
+      </article>
+
+
+     
+
+
+    </div>
+  </section>
+
+
+  <!-- DESIGN SYSTEM -->
+  <section class="palettes-wrap" id="system">
+    <div class="palettes-inner">
+      <div class="head">
+        <div class="section-label reveal" style="justify-content:center">Design System</div>
+        <h2 class="reveal">Consistent by <em>construction.</em></h2>
+      </div>
+
+
+      <div class="palette-block reveal">
+        <h3>Otlobly Palette</h3>
+        <p class="desc">
+          Orange owns every primary action — and nothing else. Neutrals carry the
+          interface, and status colors communicate without words.
+        </p>
+
+
+        <div class="palette-row">
+          <div class="swatch" style="background:#FF6B00;color:#fff">
+            <strong>#FF6B00</strong>
+            <small>Primary Orange</small>
+          </div>
+          <div class="swatch" style="background:#191919;color:#fff;border:1px solid #333">
+            <strong>#191919</strong>
+            <small>Ink</small>
+          </div>
+          <div class="swatch swatch-light" style="background:#FAFAFA;color:#191919;border:1px solid #ddd">
+            <strong>#FAFAFA</strong>
+            <small>Surface</small>
+          </div>
+          <div class="swatch" style="background:#22A068;color:#fff">
+            <strong>#22A068</strong>
+            <small>Success</small>
+          </div>
+          <div class="swatch" style="background:#D64545;color:#fff">
+            <strong>#D64545</strong>
+            <small>Error</small>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="palette-block reveal">
+        <h3>Type Scale — Inter</h3>
+        <p class="desc">
+          Five levels keep hierarchy predictable across both languages.
+        </p>
+        <div class="demo-grid">
+          <div class="demo-item"><strong>32</strong><span>Display · Bold</span></div>
+          <div class="demo-item"><strong>24</strong><span>Heading · Bold</span></div>
+          <div class="demo-item"><strong>18</strong><span>Title · SemiBold</span></div>
+          <div class="demo-item"><strong>16</strong><span>Body · Regular</span></div>
+          <div class="demo-item"><strong>12</strong><span>Caption · Medium</span></div>
+        </div>
+      </div>
+
+
+      <div class="palette-block reveal">
+        <h3>Foundations</h3>
+        <div class="shipping-list">
+          <div class="shipping-row"><span>Spacing</span><strong>4px system · 20px screen margin</strong></div>
+          <div class="shipping-row"><span>Touch targets</span><strong>48px minimum</strong></div>
+          <div class="shipping-row"><span>Radius</span><strong>8 / 12 / 16 / Full · pill buttons</strong></div>
+          <div class="shipping-row"><span>Icons</span><strong>2px outline on a 24px grid</strong></div>
+          <div class="shipping-row"><span>Tokens</span><strong>Primitives → Semantic → Components</strong></div>
+          <div class="shipping-row"><span>Breakpoints</span><strong>375 / 390 / 393 / 430</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- IMPACT -->
+  <section class="outcome" id="impact">
+    <div class="section-label reveal" style="justify-content:center">Design Targets</div>
+    <h2 class="reveal">Faster orders. <em>Honest pricing.</em></h2>
+    <p class="reveal">
+      These are the targets the design commits to — set against the 4.8-minute
+      ordering baseline from research, and to be validated through usability
+      testing on the prototype.
+    </p>
+
+
+    <div class="stat-cards">
+      <div class="stat-card reveal">
+        <div class="val">7 → 4</div>
+        <div class="lbl">Steps to Order</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">&lt;3 min</div>
+        <div class="lbl">Order Time Target</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">90%+</div>
+        <div class="lbl">Know the Total Before Paying</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="val">RTL</div>
+        <div class="lbl">Designed In From Day One</div>
+      </div>
+    </div>
+
+
+    <div class="admin-note reveal">
+      <strong>Biggest learning:</strong>
+      investing in the three-tier token system first made the Arabic RTL version
+      nearly free — components stretched to mirror instead of breaking.
+    </div>
+
+
+    <div class="outcome-actions reveal">
+      <a class="cta-btn outcome-btn" href="https://www.figma.com/proto/Lf6vQNECDcglKENYOTqETT/Simple-Style-Guide-%7C-Typography--Color---Shadow--Community-?node-id=128-479&t=tKVCdqB9COWqwRbq-1" target="_blank" rel="noopener noreferrer">
+        View Figma Prototype →
+      </a>
+      <a class="cta-btn outcome-btn secondary" href="https://www.figma.com/design/Lf6vQNECDcglKENYOTqETT/Simple-Style-Guide-%7C-Typography--Color---Shadow--Community-?node-id=128-688&t=tKVCdqB9COWqwRbq-1" target="_blank" rel="noopener noreferrer">
+        Explore Design File →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="section-label" style="justify-content:center">Get in Touch</div>
+    <h2>LET'S <em>connect.</em></h2>
+    <p class="footer-intro">
+      Have a project in mind or want to collaborate? Send me a message and I'll get back to you.
+    </p>
+
+
+    <form class="contact-form" action="https://formsubmit.co/andrewiskander1@outlook.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from the Otlobly case study">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+      </div>
+      <textarea name="message" placeholder="Your Message…" rows="5" required></textarea>
+      <button type="submit" class="cta-btn">Send Message →</button>
+    </form>
+
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/andrew-hany-iskander0212" target="_blank" rel="noopener noreferrer">
+        <span class="social-icon" aria-hidden="true">in</span>
+        <span class="social-label">LinkedIn</span>
+      </a>
+      <a href="tel:+201147412021">
+        <span class="social-icon" aria-hidden="true">☏</span>
+        <span class="social-label">+20 114 741 2021</span>
+      </a>
+      <a href="mailto:andrewiskander1@outlook.com">
+        <span class="social-icon" aria-hidden="true">@</span>
+        <span class="social-label">Email Andrew</span>
+      </a>
+    </div>
+
+
+    <div class="foot-bot">
+      <span>© <span id="currentYear"></span> ANDREW HANY</span>
+      <span></span>
+      <span>PORTFOLIO</span>
+    </div>
+  </footer>
+
+
+  <script src="../LightStep/js/cursor.js" defer></script>
+  <script src="../LightStep/js/reveal.js" defer></script>
+  <script src="../LightStep/js/gsap-anims.js" defer></script>
+
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navMenu.classList.toggle("open", !isOpen);
+    });
+
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle.setAttribute("aria-expanded", "false");
+        navMenu.classList.remove("open");
+      });
+    });
+
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
