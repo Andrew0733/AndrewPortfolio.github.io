@@ -1,0 +1,502 @@
+/* ============================================================
+   Otlobly — Food Delivery App case study theme
+   Layered over the shared LightStep styles, same approach as
+   bigmuscle.css but re-branded: red #E60000 → orange #FF6B00
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Brand variables — names MUST stay identical to the shared
+   system (they override LightStep's scoped values).
+   Values follow the Otlobly DS: #FF6B00 primary, #191919 ink,
+   #FAFAFA surface.
+   ------------------------------------------------------------ */
+.otlobly-page {
+  --c-dark: #191919;
+  --c-forest: #1a1a1a;
+  --c-sage: #2e2e2e;
+  --c-peach: #ff6b00;     /* Primary Orange */
+  --c-rust: #cc5200;      /* Orange 700 */
+  --c-brown: #191919;     /* used on the light Result section */
+  --c-cream: #fafafa;     /* Otlobly surface */
+
+  --app-primary: #ff6b00;
+  --app-dark: #191919;
+  --app-secondary: #cc5200;
+  --app-neutral: #1f1f1f;
+  --app-white: #fafafa;
+}
+
+.otlobly-page ::selection {
+  background: #ff6b00;
+  color: #fff;
+}
+
+
+/* Hero */
+.otlobly-page .hero h1 {
+  font-size: clamp(64px, 14vw, 240px);
+}
+
+.otlobly-page .hero-sub .desc {
+  max-width: 520px;
+}
+
+.otlobly-page .hero-actions,
+.otlobly-page .outcome-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.otlobly-page .hero-actions {
+  position: relative;
+  z-index: 3;
+  margin: 28px auto 0;
+}
+
+.hero-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border: 1px solid var(--c-peach);
+  border-radius: 50px;
+  color: var(--c-cream);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background .3s, color .3s, transform .3s;
+}
+
+.hero-project-link:hover,
+.hero-project-link:focus-visible {
+  background: var(--c-peach);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.hero-project-link.secondary {
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.hero-project-link.secondary:hover,
+.hero-project-link.secondary:focus-visible {
+  border-color: var(--c-peach);
+}
+
+
+/* Theme the warm accents used by the shared stylesheet */
+.otlobly-page .stat-card {
+  background: rgba(255, 107, 0, .07);
+  border-color: rgba(255, 107, 0, .24);
+}
+
+.otlobly-page .stat-card:hover {
+  background: rgba(255, 107, 0, .14);
+}
+
+.otlobly-page .survey-block h4 {
+  border-bottom-color: rgba(255, 107, 0, .25);
+}
+
+.otlobly-page .gallery-frame {
+  background: linear-gradient(135deg, rgba(255, 107, 0, .08), rgba(25, 25, 25, .5));
+  border-color: rgba(255, 107, 0, .2);
+}
+
+.otlobly-page .gallery-frame::before {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 107, 0, .14), transparent 70%);
+}
+
+.otlobly-page .gallery-frame:hover {
+  border-color: rgba(255, 107, 0, .5);
+}
+
+.otlobly-page .contact-form input,
+.otlobly-page .contact-form textarea,
+.otlobly-page .social-links a {
+  background: rgba(255, 107, 0, .04);
+  border-color: rgba(255, 107, 0, .2);
+}
+
+.otlobly-page .contact-form input:focus,
+.otlobly-page .contact-form textarea:focus {
+  background: rgba(255, 107, 0, .08);
+  border-color: var(--c-peach);
+}
+
+
+/* About section — app cover card (replaces the Big Muscle wordmark) */
+.otlobly-visual {
+  position: relative;
+  z-index: 1;
+  width: min(300px, 78%);
+  background: #191919;
+  border: 1px solid rgba(255, 107, 0, .6);
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .5);
+  transform: rotate(-4deg);
+  overflow: hidden;
+}
+
+.otlobly-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.project-facts div {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, .03);
+  border-left: 2px solid var(--c-peach);
+}
+
+.project-facts span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--c-peach);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.project-facts strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.feature-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(255, 107, 0, .18);
+  border-radius: 12px;
+  transition: transform .3s, border-color .3s, background .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 107, 0, .06);
+  border-color: rgba(255, 107, 0, .45);
+}
+
+.feature-icon {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--c-peach);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.feature-card p {
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: .75;
+}
+
+
+/* Research */
+#research .stat-cards,
+#impact .stat-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.shipping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.shipping-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, .03);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  font-size: 12px;
+}
+
+/* Change vs Big Muscle: allow the right-side value to wrap —
+   the Insight→Decision rows hold full sentences, not "90 EGP" */
+.shipping-row strong {
+  flex: 1 1 auto;
+  text-align: right;
+  color: var(--c-peach);
+}
+
+.shipping-note {
+  margin-top: 16px;
+  font-size: 11px;
+  line-height: 1.7;
+  opacity: .7;
+}
+
+
+/* Customer journey — 4 steps instead of 5 */
+.journey-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.journey-step {
+  position: relative;
+  min-height: 220px;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(255, 107, 0, .25);
+  border-radius: 16px;
+}
+
+.journey-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -17px;
+  color: var(--c-peach);
+  font-size: 20px;
+}
+
+.journey-number {
+  display: block;
+  color: var(--c-peach);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.journey-icon {
+  display: block;
+  margin: 18px 0 12px;
+  font-size: 25px;
+}
+
+.journey-step h3 {
+  margin-bottom: 8px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.journey-step p {
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: .72;
+}
+
+
+/* Screenshot frames */
+.screenshot-placeholder {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 280px;
+  aspect-ratio: 16 / 10;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 107, 0, .55);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 107, 0, .12), transparent 48%),
+    linear-gradient(145deg, #1a1a1a, #191919);
+  text-align: center;
+}
+
+.screenshot-placeholder img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Callout note (used in the Impact section) */
+.admin-note {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--c-peach);
+  background: rgba(255, 107, 0, .07);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* Result / Impact section — light background in the shared system */
+.outcome .section-label,
+.outcome .section-label::before {
+  color: var(--c-brown);
+  background: var(--c-brown);
+}
+
+.outcome .outcome-actions {
+  margin-top: 32px;
+}
+
+.outcome .outcome-btn {
+  border-color: var(--c-brown);
+  color: var(--c-brown);
+}
+
+.outcome .outcome-btn:hover,
+.outcome .outcome-btn:focus-visible {
+  background: var(--c-brown);
+  color: #fff;
+}
+
+.outcome .outcome-btn.secondary {
+  background: transparent;
+}
+
+/* Impact stat cards sit on the light Result background —
+   force ink text so they stay readable */
+#impact .stat-card,
+#impact .stat-card .val,
+#impact .stat-card .lbl,
+#impact .admin-note {
+  color: #191919;
+}
+
+#impact .stat-card {
+  background: rgba(255, 107, 0, .08);
+  border-color: rgba(255, 107, 0, .3);
+}
+
+
+/* Mobile menu */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  background: rgba(25, 25, 25, .6);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .otlobly-page nav {
+    padding: 16px 24px;
+    mix-blend-mode: normal;
+  }
+
+  .otlobly-page .nav-toggle {
+    display: flex;
+    position: relative;
+    z-index: 102;
+  }
+
+  .otlobly-page nav ul {
+    display: none;
+    position: fixed;
+    top: 76px;
+    right: 20px;
+    left: 20px;
+    z-index: 101;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid rgba(255, 107, 0, .3);
+    border-radius: 16px;
+    background: rgba(25, 25, 25, .97);
+  }
+
+  .otlobly-page nav ul.open {
+    display: flex;
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journey-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .otlobly-page .hero {
+    padding: 110px 24px 70px;
+  }
+
+  .otlobly-page .hero-meta {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .otlobly-page .hero-sub {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .otlobly-page .hero-tags {
+    text-align: left;
+  }
+
+  .otlobly-page .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .project-facts,
+  .feature-grid,
+  .journey-grid,
+  #research .stat-cards,
+  #impact .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .otlobly-visual {
+    width: min(240px, 85%);
+  }
+
+  .shipping-row {
+    font-size: 11px;
+  }
+
+  .screenshot-placeholder {
+    min-height: 220px;
+  }
+}
